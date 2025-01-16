@@ -1,9 +1,18 @@
-"use client";
+'use client';
 
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 
 const Skyfrog = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, 
+    });
+  }, []);
+
   const links = [
     {
       href: "https://www.skyfrog.net/",
@@ -32,7 +41,10 @@ const Skyfrog = () => {
   return (
     <div className="bg-gray-900 min-h-screen py-10 px-4">
       {/* Header */}
-      <div className="text-2xl font-semibold text-white p-4 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg">
+      <div
+        className="text-2xl font-semibold text-white p-4 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg"
+        data-aos="fade-down"
+      >
         Cooperative Education Program
       </div>
 
@@ -43,6 +55,7 @@ const Skyfrog = () => {
           <div
             key={alt}
             className="flex flex-col md:flex-row items-center p-6 rounded shadow-md text-white bg-gray-800"
+            data-aos="fade-down"
           >
             {/* Link Image */}
             <div className="md:w-1/2 flex justify-center mb-4 md:mb-0">
@@ -81,7 +94,11 @@ const Skyfrog = () => {
         {/* Images Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center items-center">
           {images.map(({ src, alt }) => (
-            <div key={alt} className="text-center">
+            <div
+              key={alt}
+              className="text-center"
+              data-aos="fade-up"
+            >
               <Image
                 src={src}
                 alt={alt}

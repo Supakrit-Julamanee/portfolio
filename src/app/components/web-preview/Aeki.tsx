@@ -1,9 +1,18 @@
-"use client";
+'use client';
 
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 
 const Aeki = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []);
+
   const links = [
     {
       href: "https://auth-be703.firebaseapp.com/",
@@ -36,7 +45,10 @@ const Aeki = () => {
   return (
     <div className="bg-gray-900 min-h-screen py-10 px-4">
       {/* Header */}
-      <div className="text-2xl font-semibold text-white p-4 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg">
+      <div
+        className="text-2xl font-semibold text-white p-4 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg"
+        data-aos="fade-down"
+      >
         University Project / Aeki (Furniture Sales System)
       </div>
 
@@ -46,6 +58,7 @@ const Aeki = () => {
           <div
             key={alt}
             className="flex flex-col md:flex-row items-center bg-gray-800 p-6 rounded shadow-md text-white"
+            data-aos="fade-down"
           >
             {/* Image */}
             <div className="md:w-1/2 flex justify-center mb-4 md:mb-0">
@@ -81,7 +94,10 @@ const Aeki = () => {
         ))}
 
         {/* Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center items-center">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center items-center"
+          data-aos="fade-up"
+        >
           {images.map(({ src, alt, caption }) => (
             <div key={alt} className="text-center">
               <Image
