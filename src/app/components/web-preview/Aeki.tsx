@@ -35,15 +35,19 @@ const Aeki = () => {
 
   return (
     <div className="bg-gray-900 min-h-screen py-10 px-4">
+      {/* Header */}
+      <div className="text-2xl font-semibold text-white p-4 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg">
+        University Project / Aeki (Furniture Sales System)
+      </div>
 
-      <div className="text-2xl font-semibold text-white p-2 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg">University Project  / Aeki (Furniture Sales System)</div>
-
+      {/* Content */}
       <div className="max-w-7xl mx-auto space-y-10">
         {links.map(({ href, src, alt, label, description }) => (
           <div
             key={alt}
             className="flex flex-col md:flex-row items-center bg-gray-800 p-6 rounded shadow-md text-white"
           >
+            {/* Image */}
             <div className="md:w-1/2 flex justify-center mb-4 md:mb-0">
               <a
                 href={href}
@@ -60,6 +64,8 @@ const Aeki = () => {
                 />
               </a>
             </div>
+
+            {/* Description */}
             <div className="md:w-1/2 md:pl-6">
               <a
                 href={href}
@@ -74,7 +80,8 @@ const Aeki = () => {
           </div>
         ))}
 
-        <div className="grid grid-cols-2 gap-6 justify-items-center items-center">
+        {/* Gallery */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center items-center">
           {images.map(({ src, alt, caption }) => (
             <div key={alt} className="text-center">
               <Image

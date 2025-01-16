@@ -9,7 +9,7 @@ const Skyfrog = () => {
       href: "https://www.skyfrog.net/",
       src: "/skyfrog/skyfrog-webpage.png",
       alt: "Skyfrog",
-      label: "Skyfrog Company - Web Developer (7 month)",
+      label: "Skyfrog Company - Web Developer (7 months)",
       description: (
         <>
           <p>
@@ -31,9 +31,12 @@ const Skyfrog = () => {
 
   return (
     <div className="bg-gray-900 min-h-screen py-10 px-4">
+      {/* Header */}
+      <div className="text-2xl font-semibold text-white p-4 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg">
+        Cooperative Education Program
+      </div>
 
-      <div className="text-2xl font-semibold text-white p-2 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg">Cooperative Education Program</div>
-
+      {/* Content */}
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Links Section */}
         {links.map(({ href, src, alt, label, description }) => (
@@ -41,6 +44,7 @@ const Skyfrog = () => {
             key={alt}
             className="flex flex-col md:flex-row items-center p-6 rounded shadow-md text-white bg-gray-800"
           >
+            {/* Link Image */}
             <div className="md:w-1/2 flex justify-center mb-4 md:mb-0">
               <a
                 href={href}
@@ -55,9 +59,11 @@ const Skyfrog = () => {
                   height={250}
                   className="rounded-lg shadow-lg"
                 />
-                <span className="text-xs" >Ref: https://www.skyfrog.net/home/</span>
+                <span className="text-xs block mt-2 text-gray-400">Ref: https://www.skyfrog.net/home/</span>
               </a>
             </div>
+
+            {/* Link Description */}
             <div className="md:w-1/2 md:pl-6">
               <a
                 href={href}
@@ -73,7 +79,7 @@ const Skyfrog = () => {
         ))}
 
         {/* Images Section */}
-        <div className="grid grid-cols-3 gap-6 justify-items-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center items-center">
           {images.map(({ src, alt }) => (
             <div key={alt} className="text-center">
               <Image
