@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBriefcase, faFileAlt, faPhone, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBriefcase, faFileAlt, faPhone, faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const Navbar = () => {

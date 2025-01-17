@@ -7,12 +7,14 @@ import TypeAnimetion from './components/TypeAnimetion';
 import NextJsIcon from './components/icons/NextJsIcon';
 import TailwindCssIcon from './components/icons/TailwindCssIcon';
 import TypeScriptIcon from './components/icons/TypeScript';
+import GithubIcon from './components/icons/GithubIcon';
+import GmailIcon from './components/icons/GmailIcon';
 
 const Page = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: true, 
+      duration: 1000,
+      once: true,
     });
   }, []);
 
@@ -44,6 +46,35 @@ const Page = () => {
           <TypeScriptIcon />
           <TailwindCssIcon />
         </div>
+
+        {/* GitHub and Gmail Link */}
+        <div
+          className="mt-6 flex flex-col md:flex-row items-center gap-4 text-white text-sm font-semibold"
+          data-aos="zoom-in"
+        >
+          <span>Contacts:</span>
+
+          {/* GitHub Icon and Link */}
+          <a
+            href="https://github.com/Supakrit-Julamanee"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:underline border-2 px-2 py-1 border-white rounded-lg"
+          >
+            <GithubIcon />
+            GitHub
+          </a>
+
+          {/* Gmail Icon and Email */}
+          <a
+            href="mailto:supakritjulamanee@gmail.com"
+            className="flex items-center gap-2 hover:underline border-2 px-2 py-1 border-white rounded-lg"
+          >
+            <GmailIcon />
+            supakritjulamanee@gmail.com
+          </a>
+        </div>
+
       </div>
     </div>
   );
