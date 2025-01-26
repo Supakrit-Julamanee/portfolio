@@ -43,7 +43,7 @@ const Aeki = () => {
   ];
 
   return (
-    <div className="bg-gray-900 min-h-screen py-10 px-4">
+    <div className="bg-gray-900 min-h-full py-10 px-4">
       {/* Header */}
       <div
         className="text-2xl font-semibold text-white p-4 mb-8 max-w-7xl mx-auto bg-teal-500 rounded-lg"
